@@ -196,7 +196,7 @@ $offer = $offers->getOffersById($_GET['edit']);
                             <div class="form-group">
                                 <label for="supplier">Доставчик</label>
                                 <div class="form-line">
-                                    <input <?php echo 'value="'.$offer->offers_supplier.'"';?> readonly="readonly" type="text" id="supplier" class="form-control" placeholder="Доставчик" autocomplete="off" required>
+                                    <input <?php echo 'value="'.$offer->offers_supplier.'"';?> type="text" id="supplier" class="form-control" placeholder="Доставчик" autocomplete="off" required>
                                 </div>
                             </div>
 
