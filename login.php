@@ -28,7 +28,7 @@
                     //     session_start();
                     // }
                     $_SESSION['account_id'] = $user[0]->account_id;
-                    redirect("index");
+                    redirect("../main");
                     exit();
                 }
                 else{

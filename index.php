@@ -1,27 +1,20 @@
+<?php 
+  session_start();
+?>
+
 <?php require_once ('../config/config.php'); ?>
+<?php require_once ('php_helpers/helpers.php'); ?>
 
-<?php include "components/head.php" ?>
+<?php 
+  
+  if(!isset($_SESSION['account_id']))
+  {
+    redirect("login");
+    exit();
+  }
+  
+  ?>
 
-<!-- Page Loader -->
-<?php include "components/page_loader.php" ?>
+<?php include "index.html";?>
 
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-<!-- Search Bar -->
-<?php include "components/search_bar.php" ?>
-<!-- Top Bar -->
-<?php include "components/top_bar.php" ?>
 
-<section>
-    <!-- Left Sidebar -->
-    <?php include "components/left_sidebar.php" ?>
-    <!-- #END# Left Sidebar -->
-    <!-- Right Sidebar -->
-    <?php include "components/right_sidebar.php" ?>
-    <!-- #END# Right Sidebar -->
-</section>
-
-<?php include "components/content.php" ?>
-
-<?php include "components/tail.php" ?>
